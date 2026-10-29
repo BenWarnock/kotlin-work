@@ -21,5 +21,6 @@ fun main(args: Array<String>) {
     val result = translate[word]
 
     //println(result)
-    display(result)
+    val uppercaseResult = result?.let {it.uppercase()} ?: "☹️"
+    display(uppercaseResult)
 }
