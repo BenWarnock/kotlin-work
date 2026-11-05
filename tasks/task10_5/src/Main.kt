@@ -1,4 +1,4 @@
-// Task 10.5
+ // Task 10.5
 
 import kotlin.system.exitProcess
 

@@ -6,6 +6,14 @@ import kotlin.io.path.forEachLine
 typealias Record = Pair<String,Double>
 
 fun fetchData(filename: String) = buildList {
+    
+    val filePath = Path(filename)
+    
+    filePath.forEachLine { line ->
+    val values = line.split(",")
+    add(Record(values[0], values[1].toDouble()))
+    }
+
     // Finish the implementation of this function
 }
 
@@ -19,3 +27,4 @@ fun averageTemp(data: List<Record>): Double {
     }
     return sum / data.size
 }
+
